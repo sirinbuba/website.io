@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="/Yazılım/titleicon.png">
+
+    <title>Giriş Yap</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="/Yazılım/home.html" class="link-active">Ana Sayfa</a></li>
+                    <li><a href="#" class="link">Sayfalar</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-button">
+                <a href="#Giriş-Yap"><button class="btn white-btn" id="loginbtn" onclick="login()">Giriş
+                        Yap</button></a>
+                <a href="#Kaydol"><button class="btn" id="registerbtn" onclick="register()">Kaydol</button></a>
+            </div>
+        </nav>
+    </div>
+    <div class="form">
+        <div class="form-box">
+            <!--------------------Login-------------------->
+            <div class="login-page" id="login">
+                <form action="login.php" method="post">
+                    <h1 class="login">Giriş Yap</h1><br>
+                    <label for="name" class="font">Kullanıcı Adı</label>
+                    <div class="user_icon">
+                        <input type="text" class="font" placeholder="Kullanıcı Adı" name="username">
+                        <i class='bx bxs-user'></i>
+                    </div><br>
+                    <label for="name" class="font">Parola</label>
+                    <div class="password_icon">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" class="font" placeholder="Parola" name="password">
+                    </div><br>
+                    <div class="top">
+                        <span>Bir hesaba sahip değil misin?<a href="#Kaydol" onclick="register()">Kaydol</a></span>
+                    </div>
+                    <button type="submit" class="font-button">Giriş Yap</button>
+                </form>
+            </div>
+            <!--------------------Register-------------------->
+            <div class="register-page" id="register">
+                <div id="username_password"></div>
+                <form action="register.php" method="post" id="login-form">
+                    <h1 class="register">Kaydol</h1><br>
+                    <label for="name" class="font">Kullanıcı Adı</label>
+                    <div class="user_icon">
+                        <input type="text" class="font" name="username">
+                        <i class='bx bxs-user'></i>
+                    </div><br>
+                    <label for="name" class="font">Parola</label>
+                    <div class="password_icon">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" class="font" name="password">
+                    </div><br>
+                    <div class="top">
+                        <span>Bir hesaba sahip misin?<a href="#Giriş-Yap" onclick="login()">Giriş Yap</a></span>
+                    </div>
+                    <div class="register-button">
+                        <button type="submit" class="font-button">Kaydol</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
